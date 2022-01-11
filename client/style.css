@@ -1,0 +1,138 @@
+body {
+  padding: 0;
+  margin: 0;
+}
+
+body > div {
+  padding: 20px;
+}
+body > h1 {
+    padding: 20px;
+  }
+img {
+  border-radius: 5px;
+  transition: all 1s easy;
+}
+
+img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 10px #333;
+}
+
+table {
+  margin-top: 50px;
+}
+
+a,
+td div {
+  display: inline-block;
+  color: blue !important;
+  transition: all 1s easy;
+  cursor: pointer;
+}
+
+a:hover,
+td div:hover {
+  transform: scale(1.03);
+  text-decoration: underline;
+}
+
+button {
+  margin: 20px auto;
+}
+div#moviesDiv {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+}
+
+#userInfo {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  width: 300px;
+  border:1px grey dotted;  
+  padding: 20px;
+}
+
+.wrongUser {
+    display: none;
+    color: red;
+    font-style: italic;
+    font-weight: lighter;
+}
+#editModalWrapper {
+  display: none;
+  position: absolute;
+  z-index: 2;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+#editModalWrapper::after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.3);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.editModal {
+  position: absolute;
+  z-index: 3;
+  background-color: #fff;
+  box-shadow: 0 0 5px #333;
+  border-radius: 5px;
+  padding: 0;
+}
+
+.editModal header {
+  border-bottom: 1px solid #ccc;
+  padding: 5px 20px;
+}
+
+.editModal footer {
+  display: flex;
+  border-top: 1px solid #ccc;
+  padding: 10px 20px;
+  gap: 10px;
+  justify-content: end;
+}
+
+.editModal button {
+  margin: 0;
+}
+.modalContent {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.modalContent label::before {
+  content: "* ";
+  color: red;
+}
+
+#editModalWrapper.view .modalContent label::before {
+  content: none;
+}
+
+#tab tbody tr td {
+  transition: all 2s ease;
+}
+
+#tab tbody tr:hover td {
+  background-color:rgba(0, 0, 0, 0.1);
+}
+
+.error {
+  border: 1px solid red;
+}

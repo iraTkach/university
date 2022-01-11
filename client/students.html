@@ -1,0 +1,79 @@
+<html>
+  <head>
+    <title>Students</title>
+    <!-- Latest compiled and minified CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+      integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu"
+      crossorigin="anonymous"
+    />
+
+    <!-- Optional theme -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css"
+      integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="./students.js"></script>
+  </head>
+  <body onload="getAll()">
+    <!-- Get All Students -->
+    <div>      
+      <table id="tab" class="table table-striped">
+        <thead>
+          <tr>
+            <th>Full Name</th>
+            <th>Faculty</th>
+            <th>Grades</th>
+            <th>Edit</th>
+            <th>Delete</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+
+          <button
+            class="btn btn-success"
+            id="add"
+            onclick="addData()"
+          > Add New Student
+          </button>
+      </div>
+      <div id="editModalWrapper">
+        <div class="editModal">
+          <header>Edit</header>
+          <div class="modalContent">
+                <label for="name">Full Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="name"
+                  placeholder="Full Name"
+                />
+                <label for="faculty">Faculty</label> 
+                <input
+                  type="text" 
+                  class="form-control"
+                  id="faculty"
+                  placeholder="Faculty"
+                />  
+                <label for="birthday">Birthday</label> 
+                <input
+                  placeholder="YYYY-MM-DD"
+                  type="text"
+                  class="form-control"
+                  id="birthday"
+                />                 
+          </div>
+          <footer>
+            <button onclick="enterData()">OK</button>
+            <button onclick="cancel()">Cancel</button>
+          </footer>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

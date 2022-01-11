@@ -1,0 +1,86 @@
+<html>
+  <head>
+    <title>Grades</title>
+    <!-- Latest compiled and minified CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+      integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu"
+      crossorigin="anonymous"
+    />
+
+    <!-- Optional theme -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css"
+      integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="./grades.js"></script>
+  </head>
+  <body onload="getAll()">
+    <!-- Get All Cars -->
+    <div>  
+      <div id="userInfo">
+            <span>grades</span> 
+      </div>    
+      <table id="tab" class="table table-striped">
+        <thead>
+          <tr>
+            <th>Subject</th>
+            <th>Grade</th>
+            <th>Date</th>
+            <th>Edit</th>
+            <th>Delete</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+
+          <button
+            class="btn btn-success"
+            id="add"
+            onclick="addData()"
+          > Add New Grade
+          </button>
+      <button class="btn btn-default" id="back" onclick="home()">Back</button>
+
+      </div>
+
+      <div id="editModalWrapper">
+        <div class="editModal">
+          <header>Edit</header>
+          <div class="modalContent">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="subject"
+                  placeholder="Subject"
+                />
+                <input
+                  type="number"
+                  class="form-control"
+                  id="grade"
+                  placeholder=""
+                />
+                <input
+                  class="form-control"
+                  id="date"
+                  placeholder="YYYY-MM-DD"                  
+                  type="text"
+                />   
+                <input
+                  id="grade_id"          
+                  type="hidden"
+                />              
+          </div>
+          <footer>
+            <button onclick="enterData()">OK</button>
+            <button onclick="cancel()">Cancel</button>
+          </footer>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
